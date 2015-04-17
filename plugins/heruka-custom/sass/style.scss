@@ -1,0 +1,78 @@
+/*
+	Theme Name: Genesis Sample
+	Description: This is the sample theme created for the Genesis Framework.
+	Author: StudioPress
+	Author URI: http://www.studiopress.com/
+	Version: 2.0.1
+ 
+	Tags: black, orange, white, one-column, two-columns, three-columns, fixed-width, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+ 
+	Template: genesis
+	Template Version: 2.0.1
+ 
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-sizing";
+@import "compass/css3/images";
+
+@import "fonts";
+@import "colors";
+@import "mixins";
+
+@import "general";
+@import "header";
+@import "header-megamenu";
+@import "footer";
+@import "advanced-menu";
+@import "home";
+@import "weekly-classes";
+@import "events";
+@import "responsive-tabs";
+@import "calendar";
+
+.survey {
+	position: fixed;
+	right: 30px;
+	width: 170px;
+	bottom: 0;
+	background-color: red;
+	z-index: 9999;
+	cursor: pointer;
+	padding: 10px 20px;
+	color: white;
+	border: solid 2px white;
+	@include box-shadow(0 0 5px rgba(0,0,0,0.5));
+	border-bottom: none;
+	display: none;
+	font-weight: 600;
+	&:hover {
+		background-color: #800;
+	}
+	.fa-times {
+		position: absolute;
+		right: 13px;
+		top: 15px;
+	}
+}
+
+.entry-content .iContactForm  label {
+	display: block;
+	clear: both;
+}
+
+@media only screen and (max-width: 700px) {
+	.survey {
+		right: 0;
+		left: 0;
+		width: 100%;
+		border-left: 0;
+		border-right: 0;
+		padding: 10px 20px 10px 15px;
+	}
+}

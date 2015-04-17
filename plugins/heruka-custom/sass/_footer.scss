@@ -1,0 +1,65 @@
+/* Footer - overrides the sidebar setting to remain normal */
+
+#page .site-footer {
+	.sidebar-container {
+		background-color: $primaryMid;
+		padding-bottom: 50px;
+		margin-bottom: -50px;
+		.widget a {
+			color: #003883;//$primaryDark;
+		}
+	}
+	.site-info {
+		display: none;
+	}
+	.widget-area {
+		max-width: 1040px; 
+		left: auto; 
+		.widget {
+			width: 320px;
+			margin-right: 0;
+			.widget-title {
+				font-family: "Novecento DemiBold";
+				font-style: normal;
+				letter-spacing: 1px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	input[type=text] {
+		border-color: $hover;
+		&:focus {
+			border-color: #09f;
+		}
+	}
+}
+
+#page .site-footer {
+
+	.widget_newsletter {
+		label {
+			width: 100px;
+			display: block;
+			float: left;
+		}
+		p {
+			margin-bottom: 15px;
+			label {
+				width: 80px;
+				display: inline-block;
+			}
+			input {
+				width: 170px;
+			}
+		}
+		input[type=submit] {
+    		margin-top: 20px;
+    		margin-right: 30px;
+  			@include button;
+  			float: right;
+		}
+	}
+	.widget_text p {
+		margin-bottom: 12px;
+	}
+}

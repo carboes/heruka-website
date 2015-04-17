@@ -1,0 +1,57 @@
+
+.page-template-calendar-page-php {
+	.hentry, .entry-header {
+		//padding-bottom: 0 !important;
+		//margin-bottom: 0 !important;
+	}
+	.site-main #primary #content {
+		max-width: none;
+	}
+	.full-calendar {
+		.fc-widget-header > table {
+			margin-bottom: 0;
+		}
+		.fc-pujas {
+			color:#1d1d1d;
+			border-color:#4fb913;background-color:#80d24f;
+		}
+		.fc-gp {
+			color:#1d1d1d;
+			border-color:#c9a017;background-color:#fad677;
+		}
+		.fc-fpttp {
+			color:#1d1d1d;
+			border-color:#da3b36;background-color:#fa725c;
+		}
+		.fc-courses {
+			border-color:#4fa1ce;background-color:#bcd7ee;
+			color:#1d1d1d;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.page-template-calendar-page-php {
+		.full-calendar {
+			min-height: 500px;
+			padding: 0 20px;
+			.fc-view-container {
+				overflow: scroll;
+				.fc-view {
+					min-width: 500px;
+				}
+			}
+			.fc-scroller {
+				min-height: 400px;
+			}
+			.fc-toolbar > div {
+				display: block;
+				margin: 10px 0;
+				clear: both;
+				float: none;
+				@include clearfix;
+			}
+		}
+
+	}
+}

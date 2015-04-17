@@ -1,0 +1,43 @@
+.responsive-tab-smaller .responsive-tabs ul li {
+	font-size: 16px;
+}
+
+.responsive-tabs .responsive-tabs__list__item {
+	font-weight: 600 !important;
+}
+
+#main .responsive-tabs .widget {
+	border: none;
+}
+
+#main .responsive-tabs {
+	//margin-bottom: 30px;
+}
+
+.right-tabs .responsive-tabs {
+	position: relative;
+	.responsive-tabs__panel {
+		min-height: 500px;
+	}
+	.responsive-tabs__list {
+		position: absolute;
+		right: -299px;
+		width: 300px;
+		.responsive-tabs__list__item {
+			clear: left;
+		}
+		.responsive-tabs__list__item--active {
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			border-left: none;
+			border-bottom-right-radius: 3px;
+			border-top-left-radius: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 1069px) and (min-width: 768px) {
+	.right-tabs .responsive-tabs {
+		margin-right: 300px !important;
+	}
+}

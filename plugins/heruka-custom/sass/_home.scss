@@ -1,0 +1,352 @@
+.home #page {
+	#main {
+		max-width: none;
+	}
+	.site-header .header-wrap {
+		max-width: 1080px;
+	}
+	.entry-header {
+		display: none;
+	}
+	.entry-content {
+		section.border {
+			img {
+				position: relative;
+				float: left;
+			}
+			div {
+				padding-left: 170px;
+			}
+		}
+	}
+
+	#page #main {
+		max-width: none;
+	}
+
+	.site-main .widget-area {
+		float: none;
+		width: auto;
+		padding-top: 25px;
+		margin-right: 0 !important;
+		> ul {
+			@include clearfix;
+			max-width: 1040px;
+			margin: 20px auto;
+			padding: 0;
+		}
+		h2.widgettitle {
+			font-family: 'Novecento Normal';
+			font-style: normal;
+			font-size: 22px;
+			margin-top: 0;
+			margin-bottom: 12px;
+		}
+
+		.textwidget, p {
+			font-size: 17px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.widget.widget_text {
+			li {
+				color: #888;
+				padding-left: 20px;
+				//text-indent: -20px;
+			}
+			li:before {
+				font-family: FontAwesome;
+				content: "\f105";
+				width: 20px;
+				margin-left: -20px;
+				display: inline-block;
+			}
+		}
+
+		@mixin home-box {
+			padding: 5px;
+			padding-right: 30px;
+			float: left;
+			a {
+				//TODO Look at responsiveness...
+				@include box-shadow(0px 0px 5px #888);
+				background-color: white;
+				display: block;
+				img {
+					width: 100%;
+				}
+				.text-outer {
+					display: table;
+					width: 100%;
+					height: 80px;
+				}
+				.text {
+					padding: 8px 10px;
+					display: table-cell;
+					vertical-align: middle;
+				}
+				h5 {
+					margin: 0;
+					font-size: 14px;
+					line-height: 20px;
+					font-family: 'Novecento DemiBold';
+					color: black;
+				}
+
+				&:hover {
+					img {
+						@include opacity(0.5);
+					}
+					h5, p {
+						color: #888;
+					}
+				}
+			}
+		}
+
+
+		li.widget_homeitem {
+			@include home-box;
+			width: 33.33%;
+
+			a {
+				h5 {
+					font-size: 18px;
+					line-height: 32px;
+				}
+				p {
+					margin: 0;
+					font-size: 16px;
+					line-height: 22px;
+					height: 70px;
+					overflow: hidden;
+					color: black;
+				}
+			}
+
+		}
+
+		/* Events Widget on Homepage */
+		.widget.widget_em_widget {
+			position: relative;
+			margin-bottom: 0;
+			margin-bottom: 30px;
+			padding: 0;
+			h2 {
+				font-size: 22px;
+				font-family: "Novecento DemiBold";
+				padding: 5px;
+				a:after {
+					margin-left: 5px;
+					content: "»";
+				}
+			}
+			ul {
+				@include clearfix;
+
+				li {
+					@include home-box;
+					p.dates {
+						margin: 0;
+						font-size: 13px;
+						line-height: 20px;
+						font-family: 'Novecento Normal';
+						color: black;
+					}
+				}
+
+				&.events-size-1 li {
+					width: 50%;
+				}
+				&.events-size-2 li {
+					width: 50%;
+				}
+				&.events-size-3 li {
+					width: 33.33%;
+					a h5 {
+						font-size: 16px;
+					}
+				}
+				&.events-size-4 li {
+					width: 25%;
+				}
+			}
+		}
+		&.home-middle {
+			background-color: #eef4fe;
+			padding-bottom: 25px;
+		}
+
+		&.home-bottom {
+			> ul > li {
+				float: left;
+				width: 33.33%;
+				padding-top: 5px;
+			}
+			h3 {
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1069px) {
+	.home #page .site-main .widget-area {
+		&.home-bottom, &.home-top {
+			padding: 0 40px;
+			margin-top: 20px;
+			> ul > li {
+				float: none;
+				clear: both;
+				width: auto;
+				padding-top: 30px;
+				@include clearfix;
+				margin-bottom: 20px;
+				&.widget_homeitem {
+					a {
+						@include clearfix;
+					}
+					.widgettitle {
+						position: absolute;
+						margin-left: 330px;
+						margin-top: -30px;
+					}
+					img {
+						float: left;
+						width: auto;
+					}
+					.text-outer {
+						width: auto;
+						p {
+							height: auto;
+						}
+						h5 {
+							font-size: 20px;
+							line-height: 30px;
+						}
+					}
+				}
+			}
+		}
+		&.home-middle {
+			padding: 0 40px;
+			.widget.widget_em_widget {
+				h2 {
+					margin-top: 20px;
+				}
+				li {
+					width: 100% !important;
+					padding-bottom: 40px;
+					a {
+						@include clearfix;
+						img {
+							width: auto;
+							float: left;
+						}
+						.text-outer {
+							width: auto;
+							p {
+								height: auto;
+							}
+							.text {
+								display: block;
+							}
+							h5 {
+								font-size: 20px;
+								line-height: 30px;
+							}
+						}
+					}
+					/*width: auto;
+					float: none;
+					@include clearfix;
+					height: auto;
+					margin-bottom: 30px;
+					&.all-events-link {
+						margin-bottom: 0;
+					}
+					.thumbnail {
+						float: left;
+						margin-right: 30px;
+					}
+					.event-info {
+						float: left;
+						width: auto;
+					}*/
+				}
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width: 640px) {
+	.home .entry-content section.border {
+		img {
+			float: none;
+		}
+		div {
+			padding-left: 0;
+		}
+	}
+
+	.home #page .site-main .widget-area {
+		&.home-bottom, &.home-top {
+			> ul > li {
+				&.widget_homeitem, &.widget_text {
+					float: none;
+					margin-left: auto;
+					margin-right: auto;
+					width: auto;
+					padding: 10px 30px;
+					p {
+						margin-bottom: 0;
+						img {
+							width: auto !important;
+						}
+					}
+					.text-outer {
+						height: auto;
+					}
+					.text-outer .text {
+						display: block;		
+					}
+				}
+				&.widget_text {
+					width: auto;
+				}
+			}
+		}
+		&.home-middle .widget.widget_em_widget {
+			h2 {
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+			li {
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100% !important;
+				padding: 10px 30px;
+				display: inline-block;
+				@include clearfix;
+				a {
+					width: 100% !important;
+					img {
+						width: 100% !important;
+					}
+				}
+				.text-outer {
+					height: auto;
+				}
+				.text-outer .text {
+					display: block;		
+				}
+			}
+		}
+	}
+}

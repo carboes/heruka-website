@@ -1,0 +1,342 @@
+li.widget {
+	list-style: none !important;
+}
+
+// Roland added icons for Directions and Contact Us pages
+.email-icon, .facebook-icon, .twitter-icon, .website-icon {
+	background-position: center left; 
+	padding-left: 27px;
+	background-repeat: no-repeat;
+}
+
+.email-icon { background-image: url(images/email-20px.gif); }
+.twitter-icon {	background-image: url(images/twitter-20px.gif); }
+.facebook-icon { background-image: url(images/facebook-20px.gif); }
+.website-icon {	background-image: url(images/website-20px.gif); }
+
+
+//#page 
+.site-main {
+
+	h1, h2, h3, h4, h5 {
+		clear: none;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		strong {
+			font-family: 'Novecento DemiBold';
+		}
+	}
+	h1 {
+		font-size: 28px;
+	}
+
+	input, textarea {
+		border-color: $primaryMid;
+		&:focus {
+			border-color: #09f;
+		}
+	}
+
+	.entry-header {
+		max-width: none;
+		.entry-thumbnail {
+			margin-top: 20px;
+		}
+		margin-bottom: 20px;
+	}
+
+	h1 {
+		font-family: "Novecento Normal";
+		color: #0047a5;
+	}
+	h2, h1 span {
+		color: #0047a5;//#7ca5de;
+		margin: 5px 0;
+		font-size: 24px;
+		clear: both;
+		display: block;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	a {
+		&, & h2 {
+			color: #d94412;
+		}
+		&:hover {
+			&, & h2 {
+				color: #fe8213;
+			}
+		}
+	}
+
+
+	.widget .widget-title {
+		font-family: 'Novecento Normal';
+		font-style: normal;
+		font-size: 16px;
+		color: #0047a5;
+	}
+
+	#primary {
+		max-width: none !important;
+		#content {
+			max-width: 750px;
+		}
+	}
+
+	.entry-content {
+		max-width: none;
+		h2, h3, h4, h5, h6 {
+			margin-top: 0;
+			//color: #4e7fc2;
+			color: #0047a5;
+			font-family: "Source Sans Pro", Helvetica, sans-serif;
+			font-weight: normal;
+			margin-bottom: 8px;
+			//margin-top: 22px;
+		}
+		h3 {
+			//color: #7ca5de;
+			color: #0047a5;
+			font-style: italic;
+		}
+		p {
+			margin-bottom: 16px;
+		}
+		&, p, li {
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 0.3px;
+			line-height: 1.5;
+			color: #345;
+		}
+		p, ul {
+			margin: 0 0 28px;
+		}
+
+		.alert {
+			border: solid 1px #eee;
+			padding: 10px 20px;
+			margin-bottom: 24px;
+			margin-top: 24px;
+			background-color: #fdfdfd;
+			font-size: 18px;
+			p { 
+				margin: 10px 0;
+			}
+		}
+
+		img.alignleft, .wp-caption.alignleft {
+			margin-left: 0px;
+			clear: left;
+		}
+		img.alignright, .wp-caption.alignright {
+			margin-right: 0;
+			clear: right;
+		}
+		blockquote {
+			p, & {
+				font-size: 18px;
+				color: #1D558D;
+				font-style: italic;
+				line-height: 32px;
+			}
+			margin: 0 0 24px;
+			padding: 24px 40px; // Roland changed. Used to be: padding: 24px 40px 0; 
+			background-color: #f1f8ff;
+			border: solid 1px #CCE8FA;
+			@include border-radius(2px);
+			clear: both;
+			.more-info {
+				margin-top: 0;
+				font-style: normal;
+			}
+		}
+		h4, h5, h6 {
+			margin-top: 20px;
+			margin-bottom: 8px;
+		}
+		ul {
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+		.field label, .wpcf-field-name {
+			color: #0047a5 !important;
+			font-weight: 600;		
+			display: inline;
+		}
+		.address .field {
+			margin-bottom: 6px;
+			margin-top: 6px;
+		}
+		.wpcf-field-value {
+			display: inline;
+		}
+		.wpcf-field-textarea, .wpcf-field-textfield, .field {
+			margin-bottom: 16px;
+		}
+
+		section {
+			@include clearfix;
+			margin-top: 24px;
+			margin-bottom: 24px;
+			clear: both;
+			/*p {
+				margin: 0;
+			}
+			h2, h3, h4, h5 {
+				margin-top: 0;
+			}*/
+			&.border {
+		  		border: solid 1px #ddd;
+		  		padding: 20px 24px;
+		  		h2, h3, h4, h5 {
+					font-family: 'Novecento DemiBold' !important;
+				}
+		 	}
+			.more-info {
+				margin-top: 24px;
+			}
+		}
+		.wp-caption {
+			position: relative;
+			border: solid 1px #ddd;
+			padding: 10px 15px;
+			.wp-caption-text {
+				margin: 0;
+				padding: 8px 5px 0;
+				font-size: 15px;
+			}
+		}
+		.widget {
+			border: solid 1px #ddd;
+		}
+	}
+
+	.comments-area {
+		display: none;
+	}
+
+	.widget {
+		background-color: transparent;
+	}
+
+	.more-info {
+		margin-top: 20px;
+		display: inline-block;
+		@include more-info;
+		
+	}
+}
+
+/*#page .site-main, #page .site-footer {
+	button, input[type=submit], .button {
+		margin-top: 20px;
+		@include button;
+	}
+}*/
+
+
+/* The following definitely needs a refactor. Yek! */
+
+@mixin min-width {
+	.sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+	#page {
+		#main {
+			@include clearfix;
+			max-width: 1040px;
+			margin: 0 auto;
+		}
+		#primary {
+			position: static;
+			max-width: 604px;
+			float: left;
+		}
+		#tertiary {
+			margin-top: 40px;
+			position: static;
+			width: 240px;
+			float: right;
+			height: auto;
+		}
+		.site-footer {
+			margin-top: 0 !important;
+		}
+	}
+
+}
+
+@media only screen and (min-width: 1000px) {
+	@include min-width;
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1069px) {
+	@include min-width;
+	#page .site-title , .sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta {
+		max-width: 800px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	#page #primary {
+		float: none !important;
+	}
+	#page .home-link {
+		padding-left: 60px !important;
+		padding-right: 60px !important;
+		.home & {
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	}
+	
+}
+
+html.ie8 {
+	@include min-width;
+	#page #primary {
+		max-width: 770px !important;
+		.entry-header, .entry-content, .entry-summary, .entry-meta {
+			padding-left: 50px !important;
+		}
+	}
+	#page #tertiary {
+		float: none !important;
+	}
+}
+
+@media only screen and (max-width: 1069px) {
+	#page .site-main #primary #content {
+		padding: 0 60px;
+		max-width: none;
+	}
+	#page .site-main #tertiary {
+		clear: both;
+		max-width: none;
+		width: auto;
+		float: none;
+		padding: 0 60px 40px;
+		position: static;
+		.widget-area {
+			width: 100% !important;
+			float: none;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	#page .site-main #primary #content
+	{
+		padding: 0;
+	}
+	#page .site-main #tertiary {
+		padding: 20px;
+	}
+}
+
+
+

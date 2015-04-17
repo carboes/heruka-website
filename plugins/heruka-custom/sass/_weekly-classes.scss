@@ -1,0 +1,171 @@
+.widget_weekly_classes {
+	.accordion {
+		h5 {
+			margin: 0;
+			padding: 5px 0;
+			font-family: 'Source Sans Pro', Helvetica, sans-serif !important;
+			font-weight: normal;
+			font-size: 18px;
+			em {
+				display: none;
+			}
+			cursor: pointer;
+			//color: $secondaryDark;
+			outline: none !important;
+			color: #bc360a;//$link;
+			&:after {
+				width: 20px;
+				display: inline-block;
+				content: "\f105";
+				font-family: FontAwesome;
+				padding-left: 10px;
+			}
+			&:hover {
+				color: $hover;
+				text-decoration: underline;
+			}
+			&.active {
+				//font-weight: 600;
+				color: #0047a5;
+				&:after {
+					font-family: FontAwesome;
+					content: "\f107";
+				}
+			}
+		}
+		ul {
+			margin: 0;
+			margin-left: 20px;
+			font-size: 16px;
+			display: none;
+			color: #666;
+			&.current-region {
+				display: block;
+			}
+			li.current-post {
+				@include current-submenu-item(35px);
+			}
+		}
+	}
+	.wpcf-field-sidebar-content {
+		border-top: solid 1px #eee;
+		padding-top: 12px;
+		margin-top: 12px;
+		font-size: 16px;
+		color: #345;
+	}
+	.site-main .responsive-tabs & {
+		h5 {
+			width: 160px;
+			margin-top: 5px;
+			float: left;
+			font-size: 18px;
+			line-height: 24px;
+			padding: 5px 0;
+			em {
+				clear: both;
+				display: block;
+			}
+		}
+		ul {
+			list-style: none;
+			margin-left: 180px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		em {
+			font-size: 14px;
+			font-style: normal;
+		}
+	}
+}
+
+.single-meditation-class {
+	.wp-caption {
+		padding: 20px;
+		max-width: 225px;
+		&.alignright {
+			margin-left: 40px !important;
+		}
+	}
+	.button {
+		margin-top: 20px;
+		@include button;
+	}
+
+	.map {
+		max-width: 500px;
+	}
+	.responsive-tabs-wrapper strong {
+		font-weight: 600;
+	}
+	.responsive-tabs-wrapper .responsive-tabs__list__item {
+		margin-right: 2px !important;
+	}
+
+	.address p {
+		margin-bottom: 10px;
+	}
+	.address .branch-map {
+		margin-top: 20px;
+
+		position: relative;
+		.pgm {
+			padding-right: 200px;
+			height: 253px !important;
+			margin-bottom: 10px;
+			.canvas {
+				height: 253px !important;
+			}
+		}
+		.post_thumbnail {
+			right: 0;
+			position: absolute;
+			top: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	#page .site-main .responsive-tabs .widget_weekly_classes {
+		h5 {
+			float: none;
+			width: auto;
+			em {
+				clear: none;
+				display: inline;
+			}
+		}
+		ul {
+			margin-left: 0;
+		}
+	}
+
+	.single-meditation-class .thumbnail {
+		float: none;
+		margin: 0 !important;
+	}
+}
+
+
+/* Google maps */
+
+.pgmm, .pgm {
+	margin-bottom: 25px;
+	.canvas {
+		width: 100% !important;
+		height: 400px !important; 
+		img {
+			max-width: none !important;
+		}
+	}
+}
+
+/*@media only screen and (max-height: 800px) {
+	.pgmm, .pgm {
+		.canvas {
+			height: 400px !important;
+		}
+	}
+}*/

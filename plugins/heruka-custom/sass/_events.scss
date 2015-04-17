@@ -1,0 +1,213 @@
+/* Events Manager*/
+
+#page .site-main .book-now {
+	@include button;
+	color: white;
+	/*margin-left: 20px;
+	.single-event & {
+		margin-left: 0;
+	}*/
+}
+
+/*- Event listing for main page & categories */
+
+.event-list-item {
+	margin-bottom: 70px;
+	img {
+		position: relative;
+		float: left;
+		margin-bottom: 15px;
+	}
+	.event-info {
+		padding-left: 170px;
+		h3 {
+			font-size: 26px;
+		}
+
+		h4, h5 {
+			margin: 8px 0;
+			font: normal italic 20px/30px "Source Sans Pro", Helvetica, sans-serif !important;
+		}
+		p {
+			margin-bottom: 14px;
+		}
+		.book-now {
+			margin-right: 15px;
+		}
+	}
+}
+
+/* Single Events page */
+
+.single-event, .courses-retreats-categories, .courses-retreats {
+	.mega-menu-item-shortcodeui-3, .shortcode {
+		display: none !important;
+	}
+}
+
+
+.single-event #page {
+	.event-info {
+		.book-now {
+			margin-left: 0;
+		}
+	}
+
+	.bookings.widget {
+		.booking-note {
+			margin-top: 20px;
+			margin-bottom: 0;
+			font-style: italic;
+		}
+
+		margin-top: 30px;
+		h3 {
+			margin-top: 0;
+		}
+		.em-booking-form-details {
+			max-width: 400px;
+			width: 100%;
+			padding: 0;
+			//display: none;
+
+			p {
+				margin-bottom: 10px;
+			}
+
+			select {
+				/* Copied from theme input[type=text] etc */
+				font-family: 'Source Sans Pro', Helvetica, sans-serif;
+				font-kerning: auto;
+				font-size: 18px; // Roland changed this. Was: font-size: 14px;
+				border: 2px solid #76aef8; // Roland changed this. Was: border:2px solid #d4d0ba;
+				padding: 5px;
+				width: 250px;
+				height: 39px; // Roland changed this. Was: height: 30px;
+				margin-left: 20px; // Roland added this line
+			}
+
+			.input-field-booking_comment {
+				label {
+					clear: both;
+					width: auto;
+				} textarea {
+					margin-left: 120px; // Roland changed this. Was: margin-left: 100px;
+					clear: both;
+				}
+			}
+			.input-field-newsletter {
+				label {
+					width: auto;
+					margin-right: 10px;
+				}
+			}
+			.em-booking-gateway-form {
+				//padding-top: 20px;
+				//width: 180px;
+				float: right;
+				position: relative;
+				img {
+					margin-top: 20px; // Roland. Was margin-top: 10px; 
+					@include opacity(0.5);
+					width: 150px;
+				}
+				select {
+					border: solid 2px #76aef8;
+					width: auto;
+				}
+				input[type=text] {
+					width: auto;
+				}
+				.em-bookings-form-gateway-cardno {
+					input[type=text] {
+						width: 250px;
+					}
+				}
+				.em-bookings-form-gateway-expiry select {
+					width: 100px !important;
+				}
+			}
+			.em-booking-buttons {
+				text-align: left;
+				max-width: 350px;
+				margin-top: 20px; // Roland. Top adjustment for BOOK NOW button
+				input[type=submit] {
+					margin-top: 15px;
+					@include button;
+				}
+			}
+		}
+		.start-booking {
+			display: none;	
+		}
+		/*&.minimised {
+			.start-booking {
+				display: inline;
+			}
+			
+			.em-booking-form-details {
+				display: none;
+			}
+		}*/
+	}
+}
+
+.sidebar-inner .widget_em_widget {
+	li {
+		padding-left: 50px;
+		min-height: 60px;
+		img {
+			position: absolute;
+			margin-left: -50px;
+			@include opacity(1);
+			border: solid 1px transparent;
+		}
+		a:hover img {
+			border-color: #d6cfc7;
+			@include opacity(0.5);
+		}
+		a {
+			display: block;
+			line-height: 16px;
+		}
+		&.all-events-link {
+			padding-left: 0;
+			height: auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.single-event .event-info {
+		padding-left: 0;
+		clear: both;
+	}
+	.event-list-item {
+		img {
+			float: none;
+		}
+		.event-info {
+			padding-left: 0;
+		}
+	}
+	.em-booking-buttons input[type=submit] {
+		clear: both;
+		float: left;
+		
+	}
+
+}
+
+@media only screen and (max-width: 430px) {
+	.single-event .em-booking-form-details .input-field-booking_comment textarea {
+		margin-left: 20px !important; // Roland changed this. Was: margin-left: 0 !important;
+	}
+	.em-booking-form span.input-group { /* Roland added this */
+		margin-left: 120px !important; 
+	}
+}
+
+.em-location-map-container {
+	width: 100% !important;
+}
+

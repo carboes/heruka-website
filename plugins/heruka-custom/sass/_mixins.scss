@@ -1,0 +1,51 @@
+@mixin button {
+	border: none;
+	//border-bottom: 3px solid #b93207;
+	@include border-radius(4px); // 2px
+	color: #fff;
+	display: inline-block;
+	padding: 8px 22px; // 10px 24px;
+	text-decoration: none;
+	background-color: #ff7444;
+	// @include background(linear-gradient(#e05d22, #d94412));
+	font-family: 'Novecento Normal';
+	font-weight: 700; // 
+	font-size: 18px;
+	display: inline-block;
+	letter-spacing: 1px;
+
+	&:hover {
+		background-color: #ff5a1f;
+		color: #fff;
+		font-weight: 1000; // 
+		text-decoration: none;
+		// @include box-shadow(1px 1px 3px #999);
+		// @include background(linear-gradient(#d94412, #e05d22));
+	}
+}
+@mixin border {
+	border: solid 1px #aaa;
+	@include border-radius(3px);
+}
+@mixin more-info {
+	font-family: 'Novecento Normal';
+	font-weight: 700; //
+	font-size: 13px;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: #0047a5;
+	background-color: #c8e2fd; // #C1D7F4;
+	padding: 6px 16px; //5px 15px;
+	@include border-radius(4px); // 2px
+
+	&:hover {
+		background-color: #abd1fb; // #0047a5;
+		color: #0047a5; //white;
+		font-weight: 1000; // 
+	}
+	/*&:after {
+		margin-left: 10px;
+		content: "\f178";
+		font-family: "FontAwesome";
+	}*/
+}
